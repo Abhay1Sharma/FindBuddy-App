@@ -46,7 +46,7 @@ app.use(bodyParser.json());
 app.use(flash());
 
 const sessionOptions = {
-    secret: "mysupersecret",
+    secret: process.env.REACT_APP_SUPER_SECRET,
     resave: false,
     saveUninitialized: true,
     cookie: {
