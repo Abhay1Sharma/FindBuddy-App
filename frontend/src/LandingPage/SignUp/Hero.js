@@ -40,7 +40,7 @@ function Hero() {
         setLoading(true);
 
         try {
-            const response = await axios.post("http://localhost:3001/signup", formData, {
+            const response = await axios.post("https://findbuddybackeapp.onrender.com/signup", formData, {
                 withCredentials: true
             });
 
@@ -73,7 +73,7 @@ function Hero() {
         setLoading(true); // Always set loading during requests
         try {
             // Fix: Send email as an object { email: "..." }
-            const response = await axios.post("http://localhost:3001/api/resend-verification", { email: formData.email });
+            const response = await axios.post("https://findbuddybackeapp.onrender.com/api/resend-verification", { email: formData.email });
 
             const newCount = count + 1;
             setCount(newCount);
@@ -96,7 +96,7 @@ function Hero() {
     const handleGoogleSuccess = async (credentialResponse) => {
         try {
             // Send the Google JWT to your backend
-            const res = await axios.post("http://localhost:3001/api/google-login", {
+            const res = await axios.post("https://findbuddybackeapp.onrender.com/api/google-login", {
                 token: credentialResponse.credential,
             });
 
