@@ -31,7 +31,7 @@ function App() {
       window.location.href = "https://findbuddyappfrontend.onrender.com/login";
     }
 
-    // 4. Set ready to true so the UI can finally show up
+    // 4. Set ready to true so the UI can finally show up 
     setReady(true);
   }, []);
 
