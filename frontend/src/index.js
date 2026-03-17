@@ -25,43 +25,9 @@ import OnLogin from "./LandingPage/OnLogin/OnLogin"
 const clientId = process.env.REACT_APP_CLIENTID;
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const token = localStorage.token;
-console.log(token);
 
 function App() {
-
-    // if (token) {
-    //     return (
-    //         <BrowserRouter>
-    //             <AuthProvider>
-    //              <GoogleOAuthProvider clientId={clientId}>
-    //                     <div className="page-wrapper">
-    //                         <Navbar />
-    //                         <div className="content">
-    //                             <Routes>
-    //                                 <Route path="/" element={<Homepage />} />
-    //                                 <Route path="/statstics" element={<Statstics />} />
-    //                                 <Route path="/membership" element={<Membership />} />
-    //                                 <Route path="/feature" element={<Features />} />
-    //                                 <Route path="/trainers" element={<Trainers />} />
-    //                                 <Route path="/contact" element={<Contact />} />
-    //                                 <Route path="/login" element={<OnLogin />} />
-    //                                 <Route path="/signup" element={<OnLogin />} />
-    //                                 <Route path="/verify-email" element={<VerifyEmail />} />
-    //                                 <Route path="/forgot-password" element={<ForgotPassword />} />
-    //                                 <Route path="/reset-password" element={<ResetPassword />} />
-    //                                 <Route path="/logout-sync" element={<LogoutSync />} />
-    //                                 <Route path="*" element={<NotFound />} />
-    //                             </Routes>
-    //                         </div>
-    //                         <Footer />
-    //                     </div>
-    //                 </GoogleOAuthProvider>
-    //             </AuthProvider>
-    //             <ToastContainer />
-    //         </ BrowserRouter>
-    //     );
-    // }
-
+    
     return (
         <BrowserRouter>
             <AuthProvider>
