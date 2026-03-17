@@ -6,7 +6,7 @@ function Hero() {
     const handlelogout = () => {
         localStorage.clear();
         // Redirecting to the logout sync endpoint
-        window.location.href = "http://localhost:3002/logout-sync";
+        window.location.href = "https://findbuddydashboardapp.onrender.com/logout-sync";
     };
 
     return (
