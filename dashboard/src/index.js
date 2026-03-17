@@ -28,7 +28,7 @@ function App() {
       // 3. Clean URL
       window.history.replaceState({}, document.title, window.location.pathname);
     } else {
-      window.location.href = "http://localhost:3000/login";
+      window.location.href = "https://findbuddyappfrontend.onrender.com/login";
     }
 
     // 4. Set ready to true so the UI can finally show up
