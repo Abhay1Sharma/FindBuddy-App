@@ -7,7 +7,6 @@ import { useAuth } from "../../AuthjsContext";
 import ForgotPassword from "../ForgotPassword/Hero";
 
 function Hero() {
-
     const [formData, setFormData] = useState({
         username: '',
         password: ''
@@ -24,7 +23,7 @@ function Hero() {
         setLoading(true);
 
         try {
-            const res = await axios.post('http://localhost:3001/login',
+            const res = await axios.post('https://findbuddybackeapp.onrender.com/login',
                 formData, // Contains username and password
                 { withCredentials: true } // CRITICAL: This allows the session cookie to be saved
             );
@@ -36,7 +35,6 @@ function Hero() {
             await fetchUser();
             navigate("/");
         } catch (err) {
-            // If the server is sending a 400 because of the DB error we saw, this will tell you:
             const message = err.response?.data?.message || "Invalid Username or Password";
             toast.error(message);
             console.error("Login Error:", err.response?.data);
