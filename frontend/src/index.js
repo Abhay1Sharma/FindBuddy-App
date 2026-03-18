@@ -20,11 +20,9 @@ import VerifyEmail from './LandingPage/VerifyEmail/VerifyEmail';
 import ForgotPassword from './LandingPage/ForgotPassword/ForgotPassword';
 import ResetPassword from './LandingPage/ResetPassword/ResetPassword';
 import LogoutSync from "./LandingPage/LogOutSync/LogoutSync";
-import OnLogin from "./LandingPage/OnLogin/OnLogin"
 
 const clientId = process.env.REACT_APP_CLIENTID;
 const root = ReactDOM.createRoot(document.getElementById('root'));
-const token = localStorage.token;
 
 function App() {
     return (

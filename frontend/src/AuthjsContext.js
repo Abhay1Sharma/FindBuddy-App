@@ -1,38 +1,3 @@
-<<<<<<< HEAD
-// import { createContext, useState, useEffect, useContext } from 'react';
-// import axios from 'axios';
-
-// const AuthContext = createContext();
-
-// export const AuthProvider = ({ children }) => {
-//     const [user, setUser] = useState(null);
-
-//     const fetchUser = async () => {
-//         const token = localStorage.getItem('token');
-//         if (!token) return;
-//         try {
-//             const res = await axios.get('https://findbuddydashboardapp.onrender.com/user/me', {
-//                 headers: { Authorization: `Bearer ${token}` }
-//             });
-//             setUser(res.data);
-//         } catch (err) {
-//             localStorage.removeItem('token');
-//         }
-//     };
-
-//     useEffect(() => { fetchUser(); }, []);
-
-//     return (
-//         <AuthContext.Provider value={{ user, setUser, fetchUser }}>
-//             {children}
-//         </AuthContext.Provider>
-//     );
-// };
-
-// export const useAuth = () => useContext(AuthContext);
-
-=======
->>>>>>> d209286f70ea4a4b75096a05bd312331cac29fa7
 import { createContext, useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 
@@ -49,11 +14,7 @@ export const AuthProvider = ({ children }) => {
             return;
         }
         try {
-<<<<<<< HEAD
-            const res = await axios.get('https://findbuddydashboardapp.onrender.com/user/me', {
-=======
             const res = await axios.get('https://findbuddybackeapp.onrender.com/user/me', {
->>>>>>> d209286f70ea4a4b75096a05bd312331cac29fa7
                 headers: { Authorization: `Bearer ${token}` }
             });
             setUser(res.data);

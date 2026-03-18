@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
+import axios from "axios";
 
 function Hero () {
     const [searchParams] = useSearchParams();
@@ -20,11 +21,7 @@ function Hero () {
 
             try {
                 // Calling your backend on Port 3001
-<<<<<<< HEAD
-                const response = await fetch(`https://findbuddydashboardapp.onrender.com/api/verify-email?token=${token}`);
-=======
-                const response = await fetch(`https://findbuddybackeapp.onrender.com/api/verify-email?token=${token}`);
->>>>>>> d209286f70ea4a4b75096a05bd312331cac29fa7
+                const response = await axios.post(`https://findbuddydashboardapp.onrender.com/api/verify-email?token=${token}`);
                 const data = await response.json();
 
                 if (response.ok) {

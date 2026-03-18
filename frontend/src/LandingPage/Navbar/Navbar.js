@@ -1,37 +1,11 @@
-import { toast } from "react-toastify";
 import { useAuth } from '../../AuthjsContext';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
-<<<<<<< HEAD
-
-  // const handlelogout = async () => {
-  //   try {
-  //     // 1. Call backend (optional for JWT, but good for session cleanup)
-  //     localStorage.removeItem('token');
-  //     localStorage.clear();
-  //     // console.log(localStorage.key("token"));
-  //     toast.success("Logout Succesfully");
-  //     setUser(null);
-
-  //     window.location.href = "https://findbuddydashboardapp.onrender.com/logout-sync";
-  //     // 4. Optionally redirect
-  //     // navigate("/login"); 
-  //   } catch (err) {
-  //     console.error("Logout failed", err);
-  //   }
-  // };
-
-const handlelogout = () => {
-  localStorage.clear();
-  setUser(null); // Clear context
-  // Bounce to 3002 to clear it, which then redirects back to 3000/login
-=======
   
 const handlelogout = () => {
   localStorage.clear();
   setUser(null); // Clear context
->>>>>>> d209286f70ea4a4b75096a05bd312331cac29fa7
   window.location.href = "https://findbuddydashboardapp.onrender.com/logout-sync";
 };
 
