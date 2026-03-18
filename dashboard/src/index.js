@@ -33,6 +33,7 @@ function App() {
     } else {
       // Case 3: No token anywhere, redirect to login
       // window.location.href = "https://findbuddyappfrontend.onrender.com/login";
+      setReady(true);
     }
   }, []);
 
