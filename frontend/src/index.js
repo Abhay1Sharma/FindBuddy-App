@@ -27,11 +27,6 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 const token = localStorage.token;
 
 function App() {
-<<<<<<< HEAD
-
-=======
-    
->>>>>>> d209286f70ea4a4b75096a05bd312331cac29fa7
     return (
         <BrowserRouter>
             <AuthProvider>
