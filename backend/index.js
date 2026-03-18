@@ -23,7 +23,11 @@ const httpServer = createServer(app); // Create the HTTP server
 // 1. Initialize Socket.io
 const io = new Server(httpServer, {
     cors: {
+<<<<<<< HEAD
         origin: ["http://localhost:3000", "https://findbuddydashboardapp.onrender.com"],
+=======
+        origin: ["https://findbuddyappfrontend.onrender.com", "https://findbuddydashboardapp.onrender.com"],
+>>>>>>> d209286f70ea4a4b75096a05bd312331cac29fa7
         methods: ["GET", "POST"],
         credentials: true
     }
@@ -39,7 +43,11 @@ main()
     .catch((err) => console.log("Database Connection Error ❌", err));
 
 // 3. Middlewares
+<<<<<<< HEAD
 app.use(cors({ origin: ['http://localhost:3000', 'https://findbuddydashboardapp.onrender.com'], credentials: true }));
+=======
+app.use(cors({ origin: ['https://findbuddyappfrontend.onrender.com', 'https://findbuddydashboardapp.onrender.com'], credentials: true }));
+>>>>>>> d209286f70ea4a4b75096a05bd312331cac29fa7
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -86,7 +94,6 @@ io.on("connection", (socket) => {
     });
 });
 
-// 7. API Endpoints (Keeping your existing logic)
 const storage = multer.memoryStorage();
 const upload = multer({ storage });
 
@@ -174,7 +181,6 @@ app.post("/updateForm", upload.single("profilePicture"), async (req, res) => {
     }).save();
 });
 
-// 8. START THE SERVER (Use httpServer, only once)
 httpServer.listen(PORT, () => {
     console.log(`FindBuddy Server running on port: ${PORT}`);
 });

@@ -3,6 +3,7 @@ import { useAuth } from '../../AuthjsContext';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
+<<<<<<< HEAD
 
   // const handlelogout = async () => {
   //   try {
@@ -25,19 +26,16 @@ const handlelogout = () => {
   localStorage.clear();
   setUser(null); // Clear context
   // Bounce to 3002 to clear it, which then redirects back to 3000/login
+=======
+  
+const handlelogout = () => {
+  localStorage.clear();
+  setUser(null); // Clear context
+>>>>>>> d209286f70ea4a4b75096a05bd312331cac29fa7
   window.location.href = "https://findbuddydashboardapp.onrender.com/logout-sync";
 };
 
-  // const onLoginSuccess = (responseData) => {
-  //   localStorage.setItem('token', responseData.token);
-  //   // This line is what makes the Navbar name appear instantly!
-  //   setUser(responseData.user);
-  //   navigate("/");
-  // };
-  const { user, setUser } = useAuth(); // Destructure setUser from your context
-  // console.log("user", user);
-
-  // const navigate = useNavigate();
+const { user, setUser } = useAuth(); // Destructure setUser from your context
 
   return (
 

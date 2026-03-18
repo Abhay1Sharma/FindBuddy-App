@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // import { createContext, useState, useEffect, useContext } from 'react';
 // import axios from 'axios';
 
@@ -30,6 +31,8 @@
 
 // export const useAuth = () => useContext(AuthContext);
 
+=======
+>>>>>>> d209286f70ea4a4b75096a05bd312331cac29fa7
 import { createContext, useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 
@@ -46,7 +49,11 @@ export const AuthProvider = ({ children }) => {
             return;
         }
         try {
+<<<<<<< HEAD
             const res = await axios.get('https://findbuddydashboardapp.onrender.com/user/me', {
+=======
+            const res = await axios.get('https://findbuddybackeapp.onrender.com/user/me', {
+>>>>>>> d209286f70ea4a4b75096a05bd312331cac29fa7
                 headers: { Authorization: `Bearer ${token}` }
             });
             setUser(res.data);
@@ -58,7 +65,6 @@ export const AuthProvider = ({ children }) => {
         }
     };
 
-    // Helper to handle login from any source (Google or Local)
     const login = (token, userData) => {
         localStorage.setItem('token', token);
         setUser(userData);

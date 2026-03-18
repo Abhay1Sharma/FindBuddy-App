@@ -9,7 +9,10 @@ function Hero() {
 
   const navigate = useNavigate();
   const { user } = useAuth();
+<<<<<<< HEAD
 
+=======
+>>>>>>> d209286f70ea4a4b75096a05bd312331cac29fa7
   const start = async () => {
     if (!user) {
       toast.info("Please Login first");
@@ -39,7 +42,11 @@ function Hero() {
       console.error("Auth error:", err);
       // If the token on 3000 is actually bad, clear it and log in again
       localStorage.removeItem('token');
+<<<<<<< HEAD
       window.location.href = "https://findbuddyappfrontend.onrender.com/login";
+=======
+      window.location.href = "https://findbuddyappfrontend.onrender.com//login";
+>>>>>>> d209286f70ea4a4b75096a05bd312331cac29fa7
     }
   };
 

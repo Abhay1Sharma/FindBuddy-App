@@ -102,8 +102,7 @@ router.post("/signup", async (req, res) => {
     </div>
 </div>`
         });
-
-
+        
         res.status(202).json({ message: "Check your email to verify your account!" });
     } catch (err) {
         res.status(400).json({ error: err.message });

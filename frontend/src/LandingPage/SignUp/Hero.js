@@ -40,7 +40,11 @@ function Hero() {
         setLoading(true);
 
         try {
+<<<<<<< HEAD
             const response = await axios.post("https://findbuddydashboardapp.onrender.com/signup", formData, {
+=======
+            const response = await axios.post("https://findbuddybackeapp.onrender.com/signup", formData, {
+>>>>>>> d209286f70ea4a4b75096a05bd312331cac29fa7
                 withCredentials: true
             });
 
@@ -73,7 +77,11 @@ function Hero() {
         setLoading(true); // Always set loading during requests
         try {
             // Fix: Send email as an object { email: "..." }
+<<<<<<< HEAD
             const response = await axios.post("https://findbuddydashboardapp.onrender.com/api/resend-verification", { email: formData.email });
+=======
+            const response = await axios.post("https://findbuddybackeapp.onrender.com/api/resend-verification", { email: formData.email });
+>>>>>>> d209286f70ea4a4b75096a05bd312331cac29fa7
 
             const newCount = count + 1;
             setCount(newCount);
@@ -96,7 +104,11 @@ function Hero() {
     const handleGoogleSuccess = async (credentialResponse) => {
         try {
             // Send the Google JWT to your backend
+<<<<<<< HEAD
             const res = await axios.post("https://findbuddydashboardapp.onrender.com/api/google-login", {
+=======
+            const res = await axios.post("https://findbuddybackeapp.onrender.com/api/google-login", {
+>>>>>>> d209286f70ea4a4b75096a05bd312331cac29fa7
                 token: credentialResponse.credential,
             });
 

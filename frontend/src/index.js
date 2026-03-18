@@ -25,10 +25,13 @@ import OnLogin from "./LandingPage/OnLogin/OnLogin"
 const clientId = process.env.REACT_APP_CLIENTID;
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const token = localStorage.token;
-console.log(token);
 
 function App() {
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> d209286f70ea4a4b75096a05bd312331cac29fa7
     return (
         <BrowserRouter>
             <AuthProvider>

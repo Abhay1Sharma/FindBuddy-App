@@ -21,7 +21,11 @@ function ResetPassword() {
 
         setLoading(true);
         try {
+<<<<<<< HEAD
             await axios.post('https://findbuddydashboardapp.onrender.com/api/reset-password', { 
+=======
+            await axios.post('https://findbuddybackeapp.onrender.com/api/reset-password', { 
+>>>>>>> d209286f70ea4a4b75096a05bd312331cac29fa7
                 token, 
                 newPassword 
             });
