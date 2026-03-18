@@ -38,7 +38,7 @@ function Hero() {
       console.error("Auth error:", err);
       // If the token on 3000 is actually bad, clear it and log in again
       localStorage.removeItem('token');
-      window.location.href = "https://findbuddybackeapp.onrender.com/login";
+      window.location.href = "https://findbuddyappfrontend.onrender.com//login";
     }
   };
 
