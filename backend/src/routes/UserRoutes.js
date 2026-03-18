@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.route("/login")
 .post(saveUrl, passport.authenticate("local", {
-    failureRedirect: "http://localhost:3000/login",
+    failureRedirect: "https://findbuddyappfrontend.onrender.com/login",
     failureFlash: true,
   }),
   loginUser

@@ -23,7 +23,7 @@ const httpServer = createServer(app); // Create the HTTP server
 // 1. Initialize Socket.io
 const io = new Server(httpServer, {
     cors: {
-        origin: ["http://localhost:3000", "http://localhost:3002"],
+        origin: ["http://localhost:3000", "https://findbuddydashboardapp.onrender.com"],
         methods: ["GET", "POST"],
         credentials: true
     }
@@ -39,7 +39,7 @@ main()
     .catch((err) => console.log("Database Connection Error ❌", err));
 
 // 3. Middlewares
-app.use(cors({ origin: ['http://localhost:3000', 'http://localhost:3002'], credentials: true }));
+app.use(cors({ origin: ['http://localhost:3000', 'https://findbuddydashboardapp.onrender.com'], credentials: true }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());

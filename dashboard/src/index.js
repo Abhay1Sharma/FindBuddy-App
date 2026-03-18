@@ -18,21 +18,22 @@ function App() {
   const [search, setSearch] = useState("");
 
   useEffect(() => {
-    // 1. Grab token from URL
     const params = new URLSearchParams(window.location.search);
-    const token = params.get("token");
+    const urlToken = params.get("token");
+    const localToken = localStorage.getItem("token");
 
-    if (token) {
-      // 2. Store it
-      localStorage.setItem("token", token);
-      // 3. Clean URL
+    if (urlToken) {
+      // Case 1: New login, token is in the URL
+      localStorage.setItem("token", urlToken);
       window.history.replaceState({}, document.title, window.location.pathname);
+      setReady(true);
+    } else if (localToken) {
+      // Case 2: Refresh, token is already in localStorage
+      setReady(true);
     } else {
-      window.location.href = "http://localhost:3000/login";
+      // Case 3: No token anywhere, redirect to login
+      window.location.href = "https://findbuddyappfrontend.onrender.com/login";
     }
-
-    // 4. Set ready to true so the UI can finally show up
-    setReady(true);
   }, []);
 
   // While checking for the token, show a loading screen

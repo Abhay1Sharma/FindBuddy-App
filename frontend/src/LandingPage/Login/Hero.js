@@ -24,7 +24,7 @@ function Hero() {
         setLoading(true);
 
         try {
-            const res = await axios.post('http://localhost:3001/login',
+            const res = await axios.post('https://findbuddydashboardapp.onrender.com/login',
                 formData, // Contains username and password
                 { withCredentials: true } // CRITICAL: This allows the session cookie to be saved
             );

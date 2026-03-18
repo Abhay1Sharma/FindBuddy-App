@@ -48,8 +48,8 @@ function Hero({ search }) {
         const jwtDecodeToken = jwtDecode(token);
         
         try {
-            const res = await axios.get("http://localhost:3001/allFormData");
-            const user = await axios.get('http://localhost:3001/user/me', {
+            const res = await axios.get("https://findbuddydashboardapp.onrender.com/allFormData");
+            const user = await axios.get('https://findbuddydashboardapp.onrender.com/user/me', {
                 headers: { Authorization: `Bearer ${token}` }
             });
             setUserData(user.data);

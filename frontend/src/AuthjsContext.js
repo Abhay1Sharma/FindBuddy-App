@@ -10,7 +10,7 @@
 //         const token = localStorage.getItem('token');
 //         if (!token) return;
 //         try {
-//             const res = await axios.get('http://localhost:3001/user/me', {
+//             const res = await axios.get('https://findbuddydashboardapp.onrender.com/user/me', {
 //                 headers: { Authorization: `Bearer ${token}` }
 //             });
 //             setUser(res.data);
@@ -46,7 +46,7 @@ export const AuthProvider = ({ children }) => {
             return;
         }
         try {
-            const res = await axios.get('http://localhost:3001/user/me', {
+            const res = await axios.get('https://findbuddydashboardapp.onrender.com/user/me', {
                 headers: { Authorization: `Bearer ${token}` }
             });
             setUser(res.data);

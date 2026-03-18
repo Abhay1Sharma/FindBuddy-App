@@ -39,14 +39,14 @@ const Navbar = ({ setSearch }) => {
     }
 
     try {
-      const res = await axios.get('http://localhost:3001/user/me', {
+      const res = await axios.get('https://findbuddydashboardapp.onrender.com/user/me', {
         headers: { Authorization: `Bearer ${token}` }
       });
       setUserData(res.data.username);
     } catch (err) {
       console.error("Fetch User Error:", err);
       localStorage.removeItem('token');
-      window.location.href = "http://localhost:3000/login";
+      window.location.href = "https://findbuddyappfrontend.onrender.com/login";
     }
   };
 
@@ -57,7 +57,7 @@ const Navbar = ({ setSearch }) => {
   //     // console.log(localStorage.key("token"));
   //     toast.success("Logout Succesfully");
   //     setUser(null);
-  //     window.location.href = "http://localhost:3001/login"; // Send back to main login
+  //     window.location.href = "https://findbuddydashboardapp.onrender.com/login"; // Send back to main login
 
 
   //     // 4. Optionally redirect
@@ -71,7 +71,7 @@ const Navbar = ({ setSearch }) => {
     localStorage.clear();
     setUserData(null); // Clear state
     // Bounce to 3000 to clear it, which then stops at 3000/login
-    window.location.href = "http://localhost:3000/logout-sync";
+    window.location.href = "https://findbuddyappfrontend.onrender.com/logout-sync";
   };
 
 
@@ -90,7 +90,7 @@ const Navbar = ({ setSearch }) => {
         <div style={{ backgroundColor: 'white', border: "none" }} className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mb-2 mb-lg-0" style={{ margin: "0 auto", backgroundColor: "white" }}>
             <li className="nav-item">
-              <Link className="nav-link active m-1.5" aria-current="page" to={"http://localhost:3000"}>Home</Link >
+              <Link className="nav-link active m-1.5" aria-current="page" to={"https://findbuddyappfrontend.onrender.com"}>Home</Link >
             </li>
 
             <li className="nav-item">

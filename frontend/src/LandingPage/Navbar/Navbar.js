@@ -13,7 +13,7 @@ const Navbar = () => {
   //     toast.success("Logout Succesfully");
   //     setUser(null);
 
-  //     window.location.href = "http://localhost:3002/logout-sync";
+  //     window.location.href = "https://findbuddydashboardapp.onrender.com/logout-sync";
   //     // 4. Optionally redirect
   //     // navigate("/login"); 
   //   } catch (err) {
@@ -25,7 +25,7 @@ const handlelogout = () => {
   localStorage.clear();
   setUser(null); // Clear context
   // Bounce to 3002 to clear it, which then redirects back to 3000/login
-  window.location.href = "http://localhost:3002/logout-sync";
+  window.location.href = "https://findbuddydashboardapp.onrender.com/logout-sync";
 };
 
   // const onLoginSuccess = (responseData) => {

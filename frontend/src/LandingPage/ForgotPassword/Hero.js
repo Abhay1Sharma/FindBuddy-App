@@ -11,7 +11,7 @@ function Hero() {
         e.preventDefault();
         setStatus('loading');
         try {
-            const res = await axios.post('http://localhost:3001/api/forgot-password', { email });
+            const res = await axios.post('https://findbuddydashboardapp.onrender.com/api/forgot-password', { email });
             if (res.status === 200) setStatus('success');
         } catch (err) {
             setStatus('error');

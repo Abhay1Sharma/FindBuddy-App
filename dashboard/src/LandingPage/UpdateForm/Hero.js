@@ -52,9 +52,9 @@ function Hero() {
 
     const fetchUser = async () => {
         try {
-            const response = await axios.post("http://localhost:3001/loggedUser", decode);
+            const response = await axios.post("https://findbuddydashboardapp.onrender.com/loggedUser", decode);
             const Id = response.data.formId;
-            const getForm = await axios.post("http://localhost:3001/getUserForm", { Id });
+            const getForm = await axios.post("https://findbuddydashboardapp.onrender.com/getUserForm", { Id });
             setformData(getForm.data.data);
         } catch (error) {
             console.log(error);
@@ -83,7 +83,7 @@ function Hero() {
             });
 
             // 3. Send 'data' (the FormData), NOT 'formData' (your state object)
-            const res = await axios.post("http://localhost:3001/updateForm", data, {
+            const res = await axios.post("https://findbuddydashboardapp.onrender.com/updateForm", data, {
                 withCredentials: true,
                 // Axios will automatically set the boundary for multipart/form-data
             });

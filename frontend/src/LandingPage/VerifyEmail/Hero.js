@@ -20,7 +20,7 @@ function Hero () {
 
             try {
                 // Calling your backend on Port 3001
-                const response = await fetch(`http://localhost:3001/api/verify-email?token=${token}`);
+                const response = await fetch(`https://findbuddydashboardapp.onrender.com/api/verify-email?token=${token}`);
                 const data = await response.json();
 
                 if (response.ok) {

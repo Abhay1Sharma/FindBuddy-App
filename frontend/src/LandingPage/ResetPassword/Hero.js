@@ -21,7 +21,7 @@ function ResetPassword() {
 
         setLoading(true);
         try {
-            await axios.post('http://localhost:3001/api/reset-password', { 
+            await axios.post('https://findbuddydashboardapp.onrender.com/api/reset-password', { 
                 token, 
                 newPassword 
             });
